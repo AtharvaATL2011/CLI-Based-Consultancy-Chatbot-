@@ -1,14 +1,16 @@
 """
-llm.py — wrapper around OpenRouter API with automatic retry on rate limits.
+llm.py — GitHub Models API wrapper (OpenAI-compatible).
+GPT-4.1 for general use, o4-mini for focused review tasks.
 """
 
+import os
 import time
 from openai import OpenAI, RateLimitError
 from chatbot.config import ANTHROPIC_API_KEY, MODEL, TEMPERATURE, MAX_TOKENS
 
 _client = OpenAI(
     api_key=ANTHROPIC_API_KEY,
-    base_url="https://openrouter.ai/api/v1",
+    base_url=os.getenv("OPENAI_BASE_URL", "https://models.github.ai/inference"),
 )
 
 
@@ -26,6 +28,14 @@ def chat(
         full_messages.append({"role": "system", "content": system_prompt})
     full_messages.extend(messages)
 
+    # Trim based on which model is being used
+    # o4-mini free tier: 4000 token limit (~8000 chars)
+    # gpt-4.1 free tier: 1M token limit (~800000 chars)
+    if "o4-mini" in model or "o3-mini" in model:
+        full_messages = _trim_messages(full_messages, max_input_chars=8000)
+    else:
+        full_messages = _trim_messages(full_messages, max_input_chars=28000)
+
     for attempt in range(retries):
         try:
             response = _client.chat.completions.create(
@@ -33,23 +43,18 @@ def chat(
                 max_tokens=max_tokens,
                 temperature=temperature,
                 messages=full_messages,
-                extra_headers={
-                    "HTTP-Referer": "https://github.com/AtharvaATL2011/CLI-Based-Consultancy-Chatbot-",
-                    "X-Title": "MultiMind Chatbot",
-                },
             )
             return response.choices[0].message.content
 
         except RateLimitError:
             if attempt < retries - 1:
                 wait = retry_delay * (attempt + 1)
-                print(f"\n[Rate limited] Waiting {wait}s before retry ({attempt+1}/{retries-1})...")
+                print(f"\n[Rate limited] Waiting {wait}s before retry ({attempt + 1}/{retries - 1})...")
                 time.sleep(wait)
             else:
                 return (
                     "The AI service is temporarily rate-limited. "
-                    "Please wait 30 seconds and try again. "
-                    "This is a free tier limitation."
+                    "Please wait 30 seconds and try again."
                 )
 
         except Exception as e:
@@ -57,12 +62,35 @@ def chat(
 
 
 def quick_classify(prompt: str) -> str:
-    """Lightweight call for intent routing — low tokens, deterministic."""
-    return chat(
-        messages=[{"role": "user", "content": prompt}],
-        system_prompt="You are a classifier. Respond with exactly one word, nothing else.",
-        max_tokens=10,
-        temperature=0.0,
-        retries=2,
-        retry_delay=3,
-    )
+    """Lightweight call for intent routing — always uses gpt-4.1."""
+    full_messages = [
+        {"role": "system", "content": "You are a classifier. Respond with exactly one word, nothing else."},
+        {"role": "user", "content": prompt},
+    ]
+    try:
+        response = _client.chat.completions.create(
+            model=MODEL,  # always gpt-4.1 for routing — never reasoning model
+            max_tokens=10,
+            temperature=0.0,
+            messages=full_messages,
+        )
+        return response.choices[0].message.content
+    except Exception:
+        return "general"
+
+
+def _trim_messages(messages: list[dict], max_input_chars: int = 28000) -> list[dict]:
+    """
+    Trim oldest messages to stay within model input limits.
+    Always keeps the latest user message intact.
+    """
+    total = sum(len(m["content"]) for m in messages)
+    if total <= max_input_chars:
+        return messages
+    trimmed = list(messages)
+    while len(trimmed) > 1:
+        total = sum(len(m["content"]) for m in trimmed)
+        if total <= max_input_chars:
+            break
+        trimmed.pop(0)
+    return trimmed

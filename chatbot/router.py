@@ -6,10 +6,11 @@ from chatbot.llm import quick_classify
 from chatbot.config import VALID_DOMAINS, DEFAULT_DOMAIN
 
 _CLASSIFICATION_PROMPT = """Classify the user message into exactly one of these domains:
-- education   (learning, studying, explaining concepts, homework, skills, courses)
-- healthcare  (symptoms, medicine, mental health, fitness, nutrition, doctors)
-- finance     (money, budgeting, savings, investing, taxes, debt, salary)
-- general     (anything else, greetings, unclear, out-of-scope)
+- education    (learning, studying, explaining concepts, homework, science, math, history)
+- healthcare   (symptoms, medicine, mental health, fitness, nutrition, doctors)
+- finance      (money, budgeting, savings, investing, taxes, debt, salary)
+- programming  (coding, programming, software, bugs, algorithms, web dev, databases, APIs, code review)
+- general      (anything else, greetings, unclear, out-of-scope)
 
 User message: "{message}"
 
@@ -29,9 +30,10 @@ def classify(message: str) -> str:
 
 def domain_label(domain: str) -> str:
     labels = {
-        "education":  "📚 Education",
-        "healthcare": "🏥 Healthcare",
-        "finance":    "💰 Finance",
-        "general":    "💬 General",
+        "education":   "📚 Education",
+        "healthcare":  "🏥 Healthcare",
+        "finance":     "💰 Finance",
+        "programming": "💻 Programming",
+        "general":     "💬 General",
     }
     return labels.get(domain, "💬 General")

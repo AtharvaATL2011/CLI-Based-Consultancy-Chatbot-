@@ -32,10 +32,20 @@ class Engine:
         except Exception as e:
             response = f"I ran into an issue: {e}\nPlease check your API key and try again."
 
-        # 5. Post-process (disclaimers, emergency notices)
+        # 5. Run code review pass for programming domain
+        if domain == "programming":
+            try:
+                from chatbot.domains.programming import review_and_fix
+                print("\n[review] Running code review pass...")
+                response = review_and_fix(response)
+                print("[review] Done.\n")
+            except Exception as e:
+                print(f"\n[review] Review pass failed, using original response. Reason: {e}\n")
+
+        # 6. Post-process (disclaimers, emergency notices)
         response = domains.post_process(domain, response, user_message)
 
-        # 6. Save assistant response
+        # 7. Save assistant response
         self.memory.add("assistant", response, domain=domain)
 
         return response, domain

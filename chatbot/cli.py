@@ -1,5 +1,5 @@
 """
-cli.py — entry point and terminal UI.
+cli.py — entry point and terminal UI with multiline paste support.
 """
 
 import sys
@@ -30,7 +30,12 @@ HELP_TEXT = """
   [cyan]clear[/cyan]       Clear conversation history
   [cyan]history[/cyan]     Show message count
   [cyan]domain[/cyan]      Show active domain
+  [cyan]paste[/cyan]       Enter multiline/long prompt mode (for long prompts)
+  [cyan]file <path>[/cyan] Load prompt from a text file
   [cyan]quit[/cyan]        Exit
+
+[bold]Paste mode usage:[/bold]
+  Type [bold cyan]/paste[/bold cyan] → paste your long prompt → type [bold cyan]END[/bold cyan] on a new line → press Enter
 """
 
 
@@ -47,35 +52,104 @@ def _print_response(response: str, domain: str) -> None:
     )
 
 
+def _get_multiline_input() -> str:
+    """
+    Multiline input mode — handles long prompts without terminal cutoff.
+    User enters /paste, pastes content, then types END to submit.
+    """
+    console.print(
+        Panel(
+            "[dim]Paste your prompt below.\n"
+            "When finished, type [bold]END[/bold] on a new line and press Enter.\n"
+            "To cancel, press [bold]Ctrl+C[/bold].[/dim]",
+            title="[bold cyan]📋 Paste Mode[/bold cyan]",
+            border_style="cyan",
+            padding=(1, 2),
+        )
+    )
+
+    lines = []
+    while True:
+        try:
+            line = input()
+            if line.strip().upper() == "END":
+                break
+            lines.append(line)
+        except (KeyboardInterrupt, EOFError):
+            console.print("\n[dim]Paste mode cancelled.[/dim]")
+            return ""
+
+    result = "\n".join(lines).strip()
+
+    if result:
+        preview = result[:80] + "..." if len(result) > 80 else result
+        console.print(
+            f"\n[dim]✅ Captured {len(result)} characters — submitting...[/dim]"
+        )
+        console.print(f"[dim]Preview: {preview}[/dim]\n")
+
+    return result
+
+
+def _get_file_input(filepath: str) -> str:
+    """Load prompt from a text file."""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read().strip()
+        console.print(
+            f"\n[dim]✅ Loaded {len(content)} characters from [bold]{filepath}[/bold][/dim]\n"
+        )
+        return content
+    except FileNotFoundError:
+        console.print(f"[red]❌ File not found: {filepath}[/red]")
+        return ""
+    except Exception as e:
+        console.print(f"[red]❌ Error reading file: {e}[/red]")
+        return ""
+
+
 def _handle_command(command: str, engine: Engine) -> bool:
     cmd = command.strip().lower()
+
     if cmd in ("quit", "exit", "q"):
         console.print("\n[dim]Goodbye! 👋[/dim]\n")
         sys.exit(0)
+
     elif cmd == "help":
         console.print(Panel(HELP_TEXT, title="Help", border_style="dim"))
         return True
+
     elif cmd == "clear":
         engine.memory.clear()
         console.print("[dim]Session history cleared.[/dim]")
         return True
+
     elif cmd == "history":
-        console.print(f"[dim]{engine.memory.message_count()} message(s) in this session.[/dim]")
+        console.print(
+            f"[dim]{engine.memory.message_count()} message(s) in this session.[/dim]"
+        )
         return True
+
     elif cmd == "domain":
-        console.print(f"[dim]Active domain: {domain_label(engine.current_domain)}[/dim]")
+        console.print(
+            f"[dim]Active domain: {domain_label(engine.current_domain)}[/dim]"
+        )
         return True
+
     return False
 
 
 @click.command()
 @click.option("--user", default="default", help="Username for saving conversation history.")
-@click.option("--domain", default=None,
-              type=click.Choice(list(VALID_DOMAINS), case_sensitive=False),
-              help="Force a specific domain.")
+@click.option(
+    "--domain",
+    default=None,
+    type=click.Choice(list(VALID_DOMAINS), case_sensitive=False),
+    help="Force a specific domain.",
+)
 @click.option("--no-memory", is_flag=True, default=False, help="Don't save this session.")
 def main(user: str, domain: str | None, no_memory: bool) -> None:
-    """MultiMind — Education · Healthcare · Finance CLI chatbot."""
+    """MultiMind — Education · Healthcare · Finance · Programming CLI chatbot."""
 
     init_db()
     memory = Memory(user=user, resume=not no_memory)
@@ -83,6 +157,11 @@ def main(user: str, domain: str | None, no_memory: bool) -> None:
 
     console.print()
     console.print(Panel(WELCOME_BANNER.strip(), border_style="cyan", padding=(1, 2)))
+
+    if domain:
+        console.print(f"[dim]Domain locked to: {domain_label(domain)}[/dim]\n")
+    if no_memory:
+        console.print("[dim]Running in no-memory mode.[/dim]\n")
 
     while True:
         try:
@@ -93,7 +172,22 @@ def main(user: str, domain: str | None, no_memory: bool) -> None:
 
         if not user_input:
             continue
-        if _handle_command(user_input, engine):
+
+        # Handle /paste command
+        if user_input.lower() in ("/paste", "paste"):
+            user_input = _get_multiline_input()
+            if not user_input:
+                continue
+
+        # Handle /file command
+        elif user_input.lower().startswith("/file ") or user_input.lower().startswith("file "):
+            filepath = user_input.split(" ", 1)[1].strip()
+            user_input = _get_file_input(filepath)
+            if not user_input:
+                continue
+
+        # Handle other commands
+        elif _handle_command(user_input, engine):
             continue
 
         with console.status("[dim]Thinking...[/dim]", spinner="dots"):

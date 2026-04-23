@@ -24,13 +24,13 @@ def _require(key: str) -> str:
 ANTHROPIC_API_KEY: str = _require("ANTHROPIC_API_KEY")
 MODEL: str = os.getenv("MODEL", "claude-sonnet-4-20250514")
 TEMPERATURE: float = float(os.getenv("TEMPERATURE", "0.7"))
-MAX_TOKENS: int = int(os.getenv("MAX_TOKENS", "1024"))
+MAX_TOKENS: int = int(os.getenv("MAX_TOKENS", "4096"))
 
 # Storage
 DB_PATH: str = os.getenv("DB_PATH", "chatbot_memory.db")
 
 # Domains
-VALID_DOMAINS = {"education", "healthcare", "finance", "general"}
+VALID_DOMAINS = {"education", "healthcare", "finance", "programming", "general"}
 DEFAULT_DOMAIN = "general"
 
 # Prompts directory
