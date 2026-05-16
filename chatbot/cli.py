@@ -8,6 +8,7 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.markdown import Markdown
 from rich.prompt import Prompt
+from rich.syntax import Syntax
 
 from chatbot.memory import Memory, init_db
 from chatbot.engine import Engine
@@ -30,26 +31,100 @@ HELP_TEXT = """
   [cyan]clear[/cyan]       Clear conversation history
   [cyan]history[/cyan]     Show message count
   [cyan]domain[/cyan]      Show active domain
-  [cyan]paste[/cyan]       Enter multiline/long prompt mode (for long prompts)
-  [cyan]file <path>[/cyan] Load prompt from a text file
+  [cyan]/paste[/cyan]      Enter multiline/long prompt mode (for long prompts)
+  [cyan]/file <path>[/cyan] Load prompt from a text file
   [cyan]quit[/cyan]        Exit
 
 [bold]Paste mode usage:[/bold]
   Type [bold cyan]/paste[/bold cyan] → paste your long prompt → type [bold cyan]END[/bold cyan] on a new line → press Enter
 """
 
+# Code markers — if any of these appear in the response
+# it means the response contains code and should be printed raw
+_CODE_MARKERS = [
+    "import ", "export ", "export default",
+    "className=", "class=",
+    "def ", "async def ",
+    "return (", "return {",
+    "@app.", "@router.",
+    "const ", "let ", "var ",
+    "function ", "=>",
+    "FROM ", "WORKDIR ", "RUN ", "CMD ",  # Dockerfile
+    "services:", "volumes:", "depends_on:",  # docker-compose
+    "fastapi", "uvicorn",
+    "useState", "useEffect",
+    "require(", "module.exports",
+    "#!/",
+    "```",
+]
+
+
+def _contains_code(response: str) -> bool:
+    """Detect if a response contains code blocks or code syntax."""
+    for marker in _CODE_MARKERS:
+        if marker in response:
+            return True
+    return False
+
+
+def _detect_language(response: str) -> str:
+    """Detect the programming language for syntax highlighting."""
+    if any(m in response for m in ["import React", "useState", "className=", "export default", "jsx"]):
+        return "jsx"
+    elif any(m in response for m in ["FROM ", "WORKDIR ", "RUN ", "EXPOSE ", "CMD "]):
+        return "dockerfile"
+    elif any(m in response for m in ["services:", "volumes:", "depends_on:", "image:"]):
+        return "yaml"
+    elif any(m in response for m in ["def ", "import ", "@app.", "async def", "FastAPI"]):
+        return "python"
+    elif any(m in response for m in ["const ", "let ", "var ", "function ", "=>"]):
+        return "javascript"
+    elif any(m in response for m in ["<html", "<div", "<body"]):
+        return "html"
+    elif any(m in response for m in ["SELECT ", "INSERT ", "CREATE TABLE"]):
+        return "sql"
+    else:
+        return "python"  # default fallback
+
 
 def _print_response(response: str, domain: str) -> None:
+    """
+    Print response smartly:
+    - Code responses → Rich Syntax (proper highlighting like a code editor)
+    - Conversational responses → Rich panel with markdown
+    """
     label = domain_label(domain)
-    console.print(
-        Panel(
-            Markdown(response),
-            title=f"[bold]{label}[/bold]",
-            title_align="left",
-            border_style="cyan",
-            padding=(1, 2),
+
+    if _contains_code(response):
+        # Show domain label above code
+        console.print(f"\n[bold cyan]─── {label} ───[/bold cyan]\n")
+
+        # Detect language for proper highlighting
+        language = _detect_language(response)
+
+        # Rich Syntax gives you the editor-style highlighted output
+        syntax = Syntax(
+            response,
+            language,
+            theme="monokai",        # dark green theme
+            line_numbers=True,      # line numbers on left
+            word_wrap=True,
+            background_color="default",
         )
-    )
+        console.print(syntax)
+        console.print(f"\n[dim]─────────────────────────────[/dim]")
+
+    else:
+        # Rich panel for normal conversational responses
+        console.print(
+            Panel(
+                Markdown(response),
+                title=f"[bold]{label}[/bold]",
+                title_align="left",
+                border_style="cyan",
+                padding=(1, 2),
+            )
+        )
 
 
 def _get_multiline_input() -> str:

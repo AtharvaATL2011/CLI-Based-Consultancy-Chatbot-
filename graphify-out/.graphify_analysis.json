@@ -1,0 +1,227 @@
+{
+  "communities": {
+    "0": [
+      "basemodel",
+      "chatbot_engine_engine",
+      "chatbot_engine_engine_init",
+      "chatbot_engine_py",
+      "chatbot_engine_rationale_1",
+      "chatbot_memory_connect",
+      "chatbot_memory_init_db",
+      "chatbot_memory_memory",
+      "chatbot_memory_memory_add",
+      "chatbot_memory_memory_clear",
+      "chatbot_memory_memory_get_messages",
+      "chatbot_memory_memory_load_messages",
+      "chatbot_memory_memory_load_or_create_session",
+      "chatbot_memory_memory_message_count",
+      "chatbot_memory_py",
+      "chatbot_memory_rationale_1",
+      "cli_based_consultancy_chatbot_api_chatrequest"
+    ],
+    "1": [
+      "chatbot_cli_contains_code",
+      "chatbot_cli_detect_language",
+      "chatbot_cli_get_file_input",
+      "chatbot_cli_get_multiline_input",
+      "chatbot_cli_handle_command",
+      "chatbot_cli_main",
+      "chatbot_cli_print_response",
+      "chatbot_cli_py",
+      "chatbot_cli_rationale_1",
+      "chatbot_cli_rationale_131",
+      "chatbot_cli_rationale_170",
+      "chatbot_cli_rationale_227",
+      "chatbot_cli_rationale_63",
+      "chatbot_cli_rationale_71",
+      "chatbot_cli_rationale_91",
+      "chatbot_router_domain_label"
+    ],
+    "2": [
+      "api_py",
+      "chatbot_llm_chat",
+      "chatbot_llm_py",
+      "chatbot_llm_quick_classify",
+      "chatbot_llm_rationale_1",
+      "chatbot_llm_rationale_65",
+      "chatbot_llm_rationale_83",
+      "chatbot_llm_trim_messages",
+      "chatbot_router_classify",
+      "chatbot_router_py",
+      "chatbot_router_rationale_1"
+    ],
+    "3": [
+      "chatbot_domains_education_py",
+      "chatbot_domains_finance_py",
+      "chatbot_domains_healthcare_py",
+      "chatbot_init_get_system_prompt",
+      "chatbot_init_post_process",
+      "chatbot_init_rationale_1",
+      "domains_finance_add_disclaimer",
+      "domains_finance_enrich_message",
+      "domains_healthcare_is_emergency",
+      "tests_init_py"
+    ],
+    "4": [
+      "chatbot_domains_programming_py",
+      "chatbot_engine_engine_respond",
+      "domains_programming_extract_text",
+      "domains_programming_programmatic_fix",
+      "domains_programming_rationale_1",
+      "domains_programming_rationale_154",
+      "domains_programming_rationale_64",
+      "domains_programming_rationale_87",
+      "domains_programming_review_and_fix"
+    ],
+    "5": [
+      "chatbot_logic",
+      "chatbot_memory_db",
+      "domain_router",
+      "intent_detection",
+      "main_py",
+      "prompts_education",
+      "prompts_finance",
+      "prompts_healthcare",
+      "prompts_programming"
+    ],
+    "6": [
+      "chatbot_config_py",
+      "chatbot_config_rationale_1",
+      "chatbot_config_require"
+    ],
+    "7": [
+      "check_gemini_py"
+    ],
+    "8": [
+      "setup_py"
+    ],
+    "9": [
+      "readme_chatbot"
+    ]
+  },
+  "cohesion": {
+    "0": 0.18,
+    "1": 0.19,
+    "2": 0.2,
+    "3": 0.27,
+    "4": 0.28,
+    "5": 0.22,
+    "6": 0.67,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0
+  },
+  "gods": [
+    {
+      "id": "chatbot_memory_memory",
+      "label": "Memory",
+      "degree": 11
+    },
+    {
+      "id": "chatbot_cli_main",
+      "label": "main()",
+      "degree": 10
+    },
+    {
+      "id": "chatbot_engine_engine",
+      "label": "Engine",
+      "degree": 7
+    },
+    {
+      "id": "chatbot_cli_print_response",
+      "label": "_print_response()",
+      "degree": 6
+    },
+    {
+      "id": "chatbot_memory_connect",
+      "label": "_connect()",
+      "degree": 6
+    },
+    {
+      "id": "chatbot_init_get_system_prompt",
+      "label": "get_system_prompt()",
+      "degree": 5
+    },
+    {
+      "id": "domains_programming_review_and_fix",
+      "label": "review_and_fix()",
+      "degree": 5
+    },
+    {
+      "id": "cli_based_consultancy_chatbot_api_chatrequest",
+      "label": "ChatRequest",
+      "degree": 4
+    },
+    {
+      "id": "chatbot_llm_chat",
+      "label": "chat()",
+      "degree": 4
+    },
+    {
+      "id": "chatbot_router_domain_label",
+      "label": "domain_label()",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "ChatRequest",
+      "target": "Memory",
+      "source_files": [
+        "api.py",
+        "chatbot/memory.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "ChatRequest",
+      "target": "Engine",
+      "source_files": [
+        "api.py",
+        "chatbot/engine.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "main()",
+      "target": "init_db()",
+      "source_files": [
+        "chatbot/cli.py",
+        "chatbot/memory.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "main()",
+      "target": "Memory",
+      "source_files": [
+        "chatbot/cli.py",
+        "chatbot/memory.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "main()",
+      "target": "Engine",
+      "source_files": [
+        "chatbot/cli.py",
+        "chatbot/engine.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 4529,
+    "output": 1103
+  }
+}

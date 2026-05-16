@@ -1,0 +1,90 @@
+{
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\api.py": {
+    "mtime": 1777199454.1358616,
+    "hash": "f1d6af3f38baeb2a5f51539aecbe2882"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\check_gemini.py": {
+    "mtime": 1776910366.066779,
+    "hash": "31ad98d12cdcac5e0a1717831a96605a"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\setup.py": {
+    "mtime": 1775533913.3546734,
+    "hash": "03299f82b62a0ec6d70111877091d51a"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\cli.py": {
+    "mtime": 1777042479.979046,
+    "hash": "b28dfd6ff03a103f776e84a31c151026"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\config.py": {
+    "mtime": 1776222071.055027,
+    "hash": "e04fe59dc48bc29809c17f771454ac01"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\engine.py": {
+    "mtime": 1776519659.332622,
+    "hash": "524add0c3684090e416e0f441458a1de"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\llm.py": {
+    "mtime": 1776538395.223057,
+    "hash": "e84060a115490492368fa33ee4466123"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\memory.py": {
+    "mtime": 1775533411.5609865,
+    "hash": "d76abf49b3495490c896c0e4872d0661"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\router.py": {
+    "mtime": 1776222524.2097592,
+    "hash": "66d25a89efef05284bb143cc8c8f541d"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\__init__.py": {
+    "mtime": 1776222091.2117376,
+    "hash": "4e168cf2dc3cf8baf77d0c1b446c12de"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\domains\\education.py": {
+    "mtime": 1775533528.1928797,
+    "hash": "9d4dfaece0ecc6e5ebb852571b4a616d"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\domains\\finance.py": {
+    "mtime": 1775533568.347639,
+    "hash": "ac16e2e93d7b3c954ed99f30295de61f"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\domains\\healthcare.py": {
+    "mtime": 1775533548.757488,
+    "hash": "0e55750cb5d51fcd3d7eac8444fc158c"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\domains\\programming.py": {
+    "mtime": 1776911177.196708,
+    "hash": "6f9c7d3c3e9b80b35361ff3aabbe33b5"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\domains\\__init__.py": {
+    "mtime": 1775533503.6910665,
+    "hash": "faf7ca9e642392208e11d498cd7ad5f3"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\chatbot\\voice\\__init__.py": {
+    "mtime": 1775532925.9482346,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\tests\\__init__.py": {
+    "mtime": 1775532926.5097256,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\README.md": {
+    "mtime": 1776934031.0773468,
+    "hash": "c5a16e0ba9e4d7e47a899a343fdf5f8e"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\prompts\\education.txt": {
+    "mtime": 1775533596.1388032,
+    "hash": "70416d1d81bc02683956b0bb2853794f"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\prompts\\finance.txt": {
+    "mtime": 1775533632.8292122,
+    "hash": "c24c124a2d79bd03f3cfe50d9393b1ef"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\prompts\\healthcare.txt": {
+    "mtime": 1775533614.586437,
+    "hash": "276e2134cd39e7acaa1902d319480264"
+  },
+  "C:\\Users\\LENOVO\\Desktop\\CLI based Consultancy Chatbot\\CLI-Based-Consultancy-Chatbot-\\prompts\\programming.txt": {
+    "mtime": 1777199378.617234,
+    "hash": "561c92369b375ead9892642a707fef3e"
+  }
+}

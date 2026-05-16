@@ -1,0 +1,1712 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "api.py",
+      "file_type": "code",
+      "source_file": "api.py",
+      "source_location": "L1",
+      "id": "api_py",
+      "community": 2,
+      "norm_label": "api.py"
+    },
+    {
+      "label": "ChatRequest",
+      "file_type": "code",
+      "source_file": "api.py",
+      "source_location": "L21",
+      "id": "cli_based_consultancy_chatbot_api_chatrequest",
+      "community": 0,
+      "norm_label": "chatrequest"
+    },
+    {
+      "label": "BaseModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "basemodel",
+      "community": 0,
+      "norm_label": "basemodel"
+    },
+    {
+      "label": "check_gemini.py",
+      "file_type": "code",
+      "source_file": "check_gemini.py",
+      "source_location": "L1",
+      "id": "check_gemini_py",
+      "community": 7,
+      "norm_label": "check_gemini.py"
+    },
+    {
+      "label": "setup.py",
+      "file_type": "code",
+      "source_file": "setup.py",
+      "source_location": "L1",
+      "id": "setup_py",
+      "community": 8,
+      "norm_label": "setup.py"
+    },
+    {
+      "label": "cli.py",
+      "file_type": "code",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L1",
+      "id": "chatbot_cli_py",
+      "community": 1,
+      "norm_label": "cli.py"
+    },
+    {
+      "label": "_contains_code()",
+      "file_type": "code",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L62",
+      "id": "chatbot_cli_contains_code",
+      "community": 1,
+      "norm_label": "_contains_code()"
+    },
+    {
+      "label": "_detect_language()",
+      "file_type": "code",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L70",
+      "id": "chatbot_cli_detect_language",
+      "community": 1,
+      "norm_label": "_detect_language()"
+    },
+    {
+      "label": "_print_response()",
+      "file_type": "code",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L90",
+      "id": "chatbot_cli_print_response",
+      "community": 1,
+      "norm_label": "_print_response()"
+    },
+    {
+      "label": "_get_multiline_input()",
+      "file_type": "code",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L130",
+      "id": "chatbot_cli_get_multiline_input",
+      "community": 1,
+      "norm_label": "_get_multiline_input()"
+    },
+    {
+      "label": "_get_file_input()",
+      "file_type": "code",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L169",
+      "id": "chatbot_cli_get_file_input",
+      "community": 1,
+      "norm_label": "_get_file_input()"
+    },
+    {
+      "label": "_handle_command()",
+      "file_type": "code",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L186",
+      "id": "chatbot_cli_handle_command",
+      "community": 1,
+      "norm_label": "_handle_command()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L226",
+      "id": "chatbot_cli_main",
+      "community": 1,
+      "norm_label": "main()"
+    },
+    {
+      "label": "cli.py \u2014 entry point and terminal UI with multiline paste support.",
+      "file_type": "rationale",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L1",
+      "id": "chatbot_cli_rationale_1",
+      "community": 1,
+      "norm_label": "cli.py \u2014 entry point and terminal ui with multiline paste support."
+    },
+    {
+      "label": "Detect if a response contains code blocks or code syntax.",
+      "file_type": "rationale",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L63",
+      "id": "chatbot_cli_rationale_63",
+      "community": 1,
+      "norm_label": "detect if a response contains code blocks or code syntax."
+    },
+    {
+      "label": "Detect the programming language for syntax highlighting.",
+      "file_type": "rationale",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L71",
+      "id": "chatbot_cli_rationale_71",
+      "community": 1,
+      "norm_label": "detect the programming language for syntax highlighting."
+    },
+    {
+      "label": "Print response smartly:     - Code responses \u2192 Rich Syntax (proper highlighting",
+      "file_type": "rationale",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L91",
+      "id": "chatbot_cli_rationale_91",
+      "community": 1,
+      "norm_label": "print response smartly:     - code responses \u2192 rich syntax (proper highlighting"
+    },
+    {
+      "label": "Multiline input mode \u2014 handles long prompts without terminal cutoff.     User e",
+      "file_type": "rationale",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L131",
+      "id": "chatbot_cli_rationale_131",
+      "community": 1,
+      "norm_label": "multiline input mode \u2014 handles long prompts without terminal cutoff.     user e"
+    },
+    {
+      "label": "Load prompt from a text file.",
+      "file_type": "rationale",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L170",
+      "id": "chatbot_cli_rationale_170",
+      "community": 1,
+      "norm_label": "load prompt from a text file."
+    },
+    {
+      "label": "MultiMind \u2014 Education \u00b7 Healthcare \u00b7 Finance \u00b7 Programming CLI chatbot.",
+      "file_type": "rationale",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L227",
+      "id": "chatbot_cli_rationale_227",
+      "community": 1,
+      "norm_label": "multimind \u2014 education \u00b7 healthcare \u00b7 finance \u00b7 programming cli chatbot."
+    },
+    {
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "chatbot/config.py",
+      "source_location": "L1",
+      "id": "chatbot_config_py",
+      "community": 6,
+      "norm_label": "config.py"
+    },
+    {
+      "label": "_require()",
+      "file_type": "code",
+      "source_file": "chatbot/config.py",
+      "source_location": "L13",
+      "id": "chatbot_config_require",
+      "community": 6,
+      "norm_label": "_require()"
+    },
+    {
+      "label": "config.py \u2014 loads environment variables and exposes settings. All other modules",
+      "file_type": "rationale",
+      "source_file": "chatbot/config.py",
+      "source_location": "L1",
+      "id": "chatbot_config_rationale_1",
+      "community": 6,
+      "norm_label": "config.py \u2014 loads environment variables and exposes settings. all other modules"
+    },
+    {
+      "label": "engine.py",
+      "file_type": "code",
+      "source_file": "chatbot/engine.py",
+      "source_location": "L1",
+      "id": "chatbot_engine_py",
+      "community": 0,
+      "norm_label": "engine.py"
+    },
+    {
+      "label": "Engine",
+      "file_type": "code",
+      "source_file": "chatbot/engine.py",
+      "source_location": "L9",
+      "id": "chatbot_engine_engine",
+      "community": 0,
+      "norm_label": "engine"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "chatbot/engine.py",
+      "source_location": "L10",
+      "id": "chatbot_engine_engine_init",
+      "community": 0,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".respond()",
+      "file_type": "code",
+      "source_file": "chatbot/engine.py",
+      "source_location": "L15",
+      "id": "chatbot_engine_engine_respond",
+      "community": 4,
+      "norm_label": ".respond()"
+    },
+    {
+      "label": "engine.py \u2014 orchestrates routing, LLM calls, and memory.",
+      "file_type": "rationale",
+      "source_file": "chatbot/engine.py",
+      "source_location": "L1",
+      "id": "chatbot_engine_rationale_1",
+      "community": 0,
+      "norm_label": "engine.py \u2014 orchestrates routing, llm calls, and memory."
+    },
+    {
+      "label": "llm.py",
+      "file_type": "code",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L1",
+      "id": "chatbot_llm_py",
+      "community": 2,
+      "norm_label": "llm.py"
+    },
+    {
+      "label": "chat()",
+      "file_type": "code",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L17",
+      "id": "chatbot_llm_chat",
+      "community": 2,
+      "norm_label": "chat()"
+    },
+    {
+      "label": "quick_classify()",
+      "file_type": "code",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L64",
+      "id": "chatbot_llm_quick_classify",
+      "community": 2,
+      "norm_label": "quick_classify()"
+    },
+    {
+      "label": "_trim_messages()",
+      "file_type": "code",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L82",
+      "id": "chatbot_llm_trim_messages",
+      "community": 2,
+      "norm_label": "_trim_messages()"
+    },
+    {
+      "label": "llm.py \u2014 GitHub Models API wrapper (OpenAI-compatible). GPT-4.1 for general use",
+      "file_type": "rationale",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L1",
+      "id": "chatbot_llm_rationale_1",
+      "community": 2,
+      "norm_label": "llm.py \u2014 github models api wrapper (openai-compatible). gpt-4.1 for general use"
+    },
+    {
+      "label": "Lightweight call for intent routing \u2014 always uses gpt-4.1.",
+      "file_type": "rationale",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L65",
+      "id": "chatbot_llm_rationale_65",
+      "community": 2,
+      "norm_label": "lightweight call for intent routing \u2014 always uses gpt-4.1."
+    },
+    {
+      "label": "Trim oldest messages to stay within model input limits.     Always keeps the la",
+      "file_type": "rationale",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L83",
+      "id": "chatbot_llm_rationale_83",
+      "community": 2,
+      "norm_label": "trim oldest messages to stay within model input limits.     always keeps the la"
+    },
+    {
+      "label": "memory.py",
+      "file_type": "code",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L1",
+      "id": "chatbot_memory_py",
+      "community": 0,
+      "norm_label": "memory.py"
+    },
+    {
+      "label": "_connect()",
+      "file_type": "code",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L11",
+      "id": "chatbot_memory_connect",
+      "community": 0,
+      "norm_label": "_connect()"
+    },
+    {
+      "label": "init_db()",
+      "file_type": "code",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L17",
+      "id": "chatbot_memory_init_db",
+      "community": 0,
+      "norm_label": "init_db()"
+    },
+    {
+      "label": "Memory",
+      "file_type": "code",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L40",
+      "id": "chatbot_memory_memory",
+      "community": 0,
+      "norm_label": "memory"
+    },
+    {
+      "label": ".add()",
+      "file_type": "code",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L46",
+      "id": "chatbot_memory_memory_add",
+      "community": 0,
+      "norm_label": ".add()"
+    },
+    {
+      "label": ".get_messages()",
+      "file_type": "code",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L56",
+      "id": "chatbot_memory_memory_get_messages",
+      "community": 0,
+      "norm_label": ".get_messages()"
+    },
+    {
+      "label": ".clear()",
+      "file_type": "code",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L59",
+      "id": "chatbot_memory_memory_clear",
+      "community": 0,
+      "norm_label": ".clear()"
+    },
+    {
+      "label": ".message_count()",
+      "file_type": "code",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L65",
+      "id": "chatbot_memory_memory_message_count",
+      "community": 0,
+      "norm_label": ".message_count()"
+    },
+    {
+      "label": "._load_or_create_session()",
+      "file_type": "code",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L68",
+      "id": "chatbot_memory_memory_load_or_create_session",
+      "community": 0,
+      "norm_label": "._load_or_create_session()"
+    },
+    {
+      "label": "._load_messages()",
+      "file_type": "code",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L85",
+      "id": "chatbot_memory_memory_load_messages",
+      "community": 0,
+      "norm_label": "._load_messages()"
+    },
+    {
+      "label": "memory.py \u2014 stores conversation history using SQLite.",
+      "file_type": "rationale",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L1",
+      "id": "chatbot_memory_rationale_1",
+      "community": 0,
+      "norm_label": "memory.py \u2014 stores conversation history using sqlite."
+    },
+    {
+      "label": "router.py",
+      "file_type": "code",
+      "source_file": "chatbot/router.py",
+      "source_location": "L1",
+      "id": "chatbot_router_py",
+      "community": 2,
+      "norm_label": "router.py"
+    },
+    {
+      "label": "classify()",
+      "file_type": "code",
+      "source_file": "chatbot/router.py",
+      "source_location": "L20",
+      "id": "chatbot_router_classify",
+      "community": 2,
+      "norm_label": "classify()"
+    },
+    {
+      "label": "domain_label()",
+      "file_type": "code",
+      "source_file": "chatbot/router.py",
+      "source_location": "L31",
+      "id": "chatbot_router_domain_label",
+      "community": 1,
+      "norm_label": "domain_label()"
+    },
+    {
+      "label": "router.py \u2014 detects which domain a user message belongs to.",
+      "file_type": "rationale",
+      "source_file": "chatbot/router.py",
+      "source_location": "L1",
+      "id": "chatbot_router_rationale_1",
+      "community": 2,
+      "norm_label": "router.py \u2014 detects which domain a user message belongs to."
+    },
+    {
+      "label": "get_system_prompt()",
+      "file_type": "code",
+      "source_file": "chatbot/__init__.py",
+      "source_location": "L13",
+      "id": "chatbot_init_get_system_prompt",
+      "community": 3,
+      "norm_label": "get_system_prompt()"
+    },
+    {
+      "label": "post_process()",
+      "file_type": "code",
+      "source_file": "chatbot/__init__.py",
+      "source_location": "L20",
+      "id": "chatbot_init_post_process",
+      "community": 3,
+      "norm_label": "post_process()"
+    },
+    {
+      "label": "Domain modules \u2014 education, healthcare, finance, programming.",
+      "file_type": "rationale",
+      "source_file": "chatbot/__init__.py",
+      "source_location": "L1",
+      "id": "chatbot_init_rationale_1",
+      "community": 3,
+      "norm_label": "domain modules \u2014 education, healthcare, finance, programming."
+    },
+    {
+      "label": "education.py",
+      "file_type": "code",
+      "source_file": "chatbot/domains/education.py",
+      "source_location": "L1",
+      "id": "chatbot_domains_education_py",
+      "community": 3,
+      "norm_label": "education.py"
+    },
+    {
+      "label": "finance.py",
+      "file_type": "code",
+      "source_file": "chatbot/domains/finance.py",
+      "source_location": "L1",
+      "id": "chatbot_domains_finance_py",
+      "community": 3,
+      "norm_label": "finance.py"
+    },
+    {
+      "label": "enrich_message()",
+      "file_type": "code",
+      "source_file": "chatbot/domains/finance.py",
+      "source_location": "L16",
+      "id": "domains_finance_enrich_message",
+      "community": 3,
+      "norm_label": "enrich_message()"
+    },
+    {
+      "label": "add_disclaimer()",
+      "file_type": "code",
+      "source_file": "chatbot/domains/finance.py",
+      "source_location": "L20",
+      "id": "domains_finance_add_disclaimer",
+      "community": 3,
+      "norm_label": "add_disclaimer()"
+    },
+    {
+      "label": "healthcare.py",
+      "file_type": "code",
+      "source_file": "chatbot/domains/healthcare.py",
+      "source_location": "L1",
+      "id": "chatbot_domains_healthcare_py",
+      "community": 3,
+      "norm_label": "healthcare.py"
+    },
+    {
+      "label": "is_emergency()",
+      "file_type": "code",
+      "source_file": "chatbot/domains/healthcare.py",
+      "source_location": "L31",
+      "id": "domains_healthcare_is_emergency",
+      "community": 3,
+      "norm_label": "is_emergency()"
+    },
+    {
+      "label": "programming.py",
+      "file_type": "code",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L1",
+      "id": "chatbot_domains_programming_py",
+      "community": 4,
+      "norm_label": "programming.py"
+    },
+    {
+      "label": "_extract_text()",
+      "file_type": "code",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L63",
+      "id": "domains_programming_extract_text",
+      "community": 4,
+      "norm_label": "_extract_text()"
+    },
+    {
+      "label": "review_and_fix()",
+      "file_type": "code",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L86",
+      "id": "domains_programming_review_and_fix",
+      "community": 4,
+      "norm_label": "review_and_fix()"
+    },
+    {
+      "label": "_programmatic_fix()",
+      "file_type": "code",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L153",
+      "id": "domains_programming_programmatic_fix",
+      "community": 4,
+      "norm_label": "_programmatic_fix()"
+    },
+    {
+      "label": "programming.py \u2014 Programming domain with Gemini 2.5 Flash code review. Generati",
+      "file_type": "rationale",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L1",
+      "id": "domains_programming_rationale_1",
+      "community": 4,
+      "norm_label": "programming.py \u2014 programming domain with gemini 2.5 flash code review. generati"
+    },
+    {
+      "label": "Safely extract text from Gemini response.     Handles thinking mode where respo",
+      "file_type": "rationale",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L64",
+      "id": "domains_programming_rationale_64",
+      "community": 4,
+      "norm_label": "safely extract text from gemini response.     handles thinking mode where respo"
+    },
+    {
+      "label": "Two-layer review:     Layer 1 \u2014 Gemini 2.5 Flash (smart, understands context)",
+      "file_type": "rationale",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L87",
+      "id": "domains_programming_rationale_87",
+      "community": 4,
+      "norm_label": "two-layer review:     layer 1 \u2014 gemini 2.5 flash (smart, understands context)"
+    },
+    {
+      "label": "Deterministic patches for known recurring bugs.     Always runs \u2014 either alone",
+      "file_type": "rationale",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L154",
+      "id": "domains_programming_rationale_154",
+      "community": 4,
+      "norm_label": "deterministic patches for known recurring bugs.     always runs \u2014 either alone"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "tests/__init__.py",
+      "source_location": "L1",
+      "id": "tests_init_py",
+      "community": 3,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "CLI-Based Consultancy Chatbot",
+      "file_type": "document",
+      "source_file": "README.md",
+      "id": "readme_chatbot",
+      "community": 9,
+      "norm_label": "cli-based consultancy chatbot"
+    },
+    {
+      "label": "Main Entry Point",
+      "file_type": "code",
+      "source_file": "main.py",
+      "id": "main_py",
+      "community": 5,
+      "norm_label": "main entry point"
+    },
+    {
+      "label": "Core Chatbot Logic",
+      "file_type": "code",
+      "source_file": "chatbot/",
+      "id": "chatbot_logic",
+      "community": 5,
+      "norm_label": "core chatbot logic"
+    },
+    {
+      "label": "SQLite Memory Database",
+      "file_type": "code",
+      "source_file": "chatbot_memory.db",
+      "id": "chatbot_memory_db",
+      "community": 5,
+      "norm_label": "sqlite memory database"
+    },
+    {
+      "label": "Education Assistant Prompt",
+      "file_type": "document",
+      "source_file": "prompts/education.txt",
+      "id": "prompts_education",
+      "community": 5,
+      "norm_label": "education assistant prompt"
+    },
+    {
+      "label": "Finance Assistant Prompt",
+      "file_type": "document",
+      "source_file": "prompts/finance.txt",
+      "id": "prompts_finance",
+      "community": 5,
+      "norm_label": "finance assistant prompt"
+    },
+    {
+      "label": "Healthcare Assistant Prompt",
+      "file_type": "document",
+      "source_file": "prompts/healthcare.txt",
+      "id": "prompts_healthcare",
+      "community": 5,
+      "norm_label": "healthcare assistant prompt"
+    },
+    {
+      "label": "Programming Assistant Prompt",
+      "file_type": "document",
+      "source_file": "prompts/programming.txt",
+      "id": "prompts_programming",
+      "community": 5,
+      "norm_label": "programming assistant prompt"
+    },
+    {
+      "label": "Intent Detection",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "id": "intent_detection",
+      "community": 5,
+      "norm_label": "intent detection"
+    },
+    {
+      "label": "Domain Router",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "id": "domain_router",
+      "community": 5,
+      "norm_label": "domain router"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "api_py",
+      "target": "cli_based_consultancy_chatbot_api_chatrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "api_py",
+      "target": "chatbot_llm_chat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "api.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "cli_based_consultancy_chatbot_api_chatrequest",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "api.py",
+      "source_location": "L6",
+      "weight": 0.8,
+      "source": "cli_based_consultancy_chatbot_api_chatrequest",
+      "target": "chatbot_memory_memory",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "api.py",
+      "source_location": "L7",
+      "weight": 0.8,
+      "source": "cli_based_consultancy_chatbot_api_chatrequest",
+      "target": "chatbot_engine_engine",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "chatbot_cli_py",
+      "target": "chatbot_cli_contains_code",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "chatbot_cli_py",
+      "target": "chatbot_cli_detect_language",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "chatbot_cli_py",
+      "target": "chatbot_cli_print_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "chatbot_cli_py",
+      "target": "chatbot_cli_get_multiline_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "chatbot_cli_py",
+      "target": "chatbot_cli_get_file_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "chatbot_cli_py",
+      "target": "chatbot_cli_handle_command",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L226",
+      "weight": 1.0,
+      "source": "chatbot_cli_py",
+      "target": "chatbot_cli_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "chatbot_cli_rationale_1",
+      "target": "chatbot_cli_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "chatbot_cli_print_response",
+      "target": "chatbot_cli_contains_code",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "chatbot_cli_rationale_63",
+      "target": "chatbot_cli_contains_code",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "chatbot_cli_print_response",
+      "target": "chatbot_cli_detect_language",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "chatbot_cli_rationale_71",
+      "target": "chatbot_cli_detect_language",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L272",
+      "weight": 1.0,
+      "source": "chatbot_cli_main",
+      "target": "chatbot_cli_print_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "chatbot_cli_rationale_91",
+      "target": "chatbot_cli_print_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "chatbot/cli.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "chatbot_cli_print_response",
+      "target": "chatbot_router_domain_label"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L253",
+      "weight": 1.0,
+      "source": "chatbot_cli_main",
+      "target": "chatbot_cli_get_multiline_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "chatbot_cli_rationale_131",
+      "target": "chatbot_cli_get_multiline_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L260",
+      "weight": 1.0,
+      "source": "chatbot_cli_main",
+      "target": "chatbot_cli_get_file_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "chatbot_cli_rationale_170",
+      "target": "chatbot_cli_get_file_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L265",
+      "weight": 1.0,
+      "source": "chatbot_cli_main",
+      "target": "chatbot_cli_handle_command",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "chatbot/cli.py",
+      "source_location": "L210",
+      "weight": 1.0,
+      "source": "chatbot_cli_handle_command",
+      "target": "chatbot_router_domain_label"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/cli.py",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "chatbot_cli_rationale_227",
+      "target": "chatbot_cli_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "chatbot/cli.py",
+      "source_location": "L229",
+      "weight": 1.0,
+      "source": "chatbot_cli_main",
+      "target": "chatbot_memory_init_db"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "chatbot/cli.py",
+      "source_location": "L230",
+      "weight": 1.0,
+      "source": "chatbot_cli_main",
+      "target": "chatbot_memory_memory"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "chatbot/cli.py",
+      "source_location": "L231",
+      "weight": 1.0,
+      "source": "chatbot_cli_main",
+      "target": "chatbot_engine_engine"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "chatbot/cli.py",
+      "source_location": "L237",
+      "weight": 1.0,
+      "source": "chatbot_cli_main",
+      "target": "chatbot_router_domain_label"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/config.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "chatbot_config_py",
+      "target": "chatbot_config_require",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/config.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "chatbot_config_rationale_1",
+      "target": "chatbot_config_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/engine.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "chatbot_engine_py",
+      "target": "chatbot_engine_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/engine.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "chatbot_engine_rationale_1",
+      "target": "chatbot_engine_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/engine.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "chatbot_engine_engine",
+      "target": "chatbot_engine_engine_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/engine.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "chatbot_engine_engine",
+      "target": "chatbot_engine_engine_respond",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "chatbot/engine.py",
+      "source_location": "L6",
+      "weight": 0.8,
+      "source": "chatbot_engine_engine",
+      "target": "chatbot_memory_memory",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "api.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "chatbot_llm_chat",
+      "target": "chatbot_engine_engine"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "chatbot_memory_memory",
+      "target": "chatbot_engine_engine_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "chatbot_engine_engine_init",
+      "target": "chatbot_memory_memory_load_or_create_session",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "chatbot_engine_engine_init",
+      "target": "chatbot_memory_memory_load_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "chatbot/engine.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "chatbot_engine_engine_respond",
+      "target": "domains_programming_review_and_fix"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "chatbot_llm_py",
+      "target": "chatbot_llm_chat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "chatbot_llm_py",
+      "target": "chatbot_llm_quick_classify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "chatbot_llm_py",
+      "target": "chatbot_llm_trim_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "chatbot_llm_rationale_1",
+      "target": "chatbot_llm_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "chatbot_llm_chat",
+      "target": "chatbot_llm_trim_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "chatbot_llm_rationale_65",
+      "target": "chatbot_llm_quick_classify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "chatbot/router.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "chatbot_router_classify",
+      "target": "chatbot_llm_quick_classify"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/llm.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "chatbot_llm_rationale_83",
+      "target": "chatbot_llm_trim_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "chatbot_memory_py",
+      "target": "chatbot_memory_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "chatbot_memory_py",
+      "target": "chatbot_memory_init_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "chatbot_memory_py",
+      "target": "chatbot_memory_memory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "chatbot_memory_rationale_1",
+      "target": "chatbot_memory_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "chatbot_memory_init_db",
+      "target": "chatbot_memory_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "chatbot_memory_memory_add",
+      "target": "chatbot_memory_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "chatbot_memory_memory_clear",
+      "target": "chatbot_memory_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "chatbot_memory_memory_load_or_create_session",
+      "target": "chatbot_memory_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "chatbot_memory_memory_load_messages",
+      "target": "chatbot_memory_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "chatbot_memory_memory",
+      "target": "chatbot_memory_memory_add",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "chatbot_memory_memory",
+      "target": "chatbot_memory_memory_get_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "chatbot_memory_memory",
+      "target": "chatbot_memory_memory_clear",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "chatbot_memory_memory",
+      "target": "chatbot_memory_memory_message_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "chatbot_memory_memory",
+      "target": "chatbot_memory_memory_load_or_create_session",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/memory.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "chatbot_memory_memory",
+      "target": "chatbot_memory_memory_load_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/router.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "chatbot_router_py",
+      "target": "chatbot_router_classify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/router.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "chatbot_router_py",
+      "target": "chatbot_router_domain_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/router.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "chatbot_router_rationale_1",
+      "target": "chatbot_router_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/__init__.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "tests_init_py",
+      "target": "chatbot_init_get_system_prompt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/education.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "chatbot_domains_education_py",
+      "target": "chatbot_init_get_system_prompt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/finance.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "chatbot_domains_finance_py",
+      "target": "chatbot_init_get_system_prompt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/healthcare.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "chatbot_domains_healthcare_py",
+      "target": "chatbot_init_get_system_prompt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "chatbot_domains_programming_py",
+      "target": "chatbot_init_get_system_prompt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/__init__.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "tests_init_py",
+      "target": "chatbot_init_post_process",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/__init__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "chatbot_init_rationale_1",
+      "target": "tests_init_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/education.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "chatbot_domains_education_py",
+      "target": "domains_finance_enrich_message",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/finance.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "chatbot_domains_finance_py",
+      "target": "domains_finance_enrich_message",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/finance.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "chatbot_domains_finance_py",
+      "target": "domains_finance_add_disclaimer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/healthcare.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "chatbot_domains_healthcare_py",
+      "target": "domains_finance_enrich_message",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L248",
+      "weight": 1.0,
+      "source": "chatbot_domains_programming_py",
+      "target": "domains_finance_enrich_message",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/healthcare.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "chatbot_domains_healthcare_py",
+      "target": "domains_finance_add_disclaimer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/healthcare.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "chatbot_domains_healthcare_py",
+      "target": "domains_healthcare_is_emergency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "chatbot_domains_programming_py",
+      "target": "domains_programming_extract_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "chatbot_domains_programming_py",
+      "target": "domains_programming_review_and_fix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "chatbot_domains_programming_py",
+      "target": "domains_programming_programmatic_fix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "domains_programming_rationale_1",
+      "target": "chatbot_domains_programming_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "domains_programming_review_and_fix",
+      "target": "domains_programming_extract_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "domains_programming_rationale_64",
+      "target": "domains_programming_extract_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "domains_programming_review_and_fix",
+      "target": "domains_programming_programmatic_fix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "domains_programming_rationale_87",
+      "target": "domains_programming_review_and_fix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "chatbot/domains/programming.py",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "domains_programming_rationale_154",
+      "target": "domains_programming_programmatic_fix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "main_py",
+      "target": "chatbot_logic"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "README.md",
+      "source": "chatbot_logic",
+      "target": "intent_detection"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "README.md",
+      "source": "chatbot_logic",
+      "target": "domain_router"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "chatbot_logic",
+      "target": "chatbot_memory_db"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "prompts/programming.txt",
+      "source": "chatbot_logic",
+      "target": "prompts_programming"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "domain_router",
+      "target": "prompts_education"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "domain_router",
+      "target": "prompts_finance"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "domain_router",
+      "target": "prompts_healthcare"
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "cbe2f0b77dcade33ca9f59b4c4dcbfae8e116db8"
+}
